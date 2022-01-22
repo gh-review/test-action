@@ -16,7 +16,7 @@ async function run() {
       .sync();
 
 
-    core.setOutput("test compltee", files.length);
+    console.log("test compltee", files.length);
   } catch (error) {
     core.setFailed(error.message);
   }
