@@ -11324,8 +11324,8 @@ async function run() {
 
     const github_token = core.getInput("GITHUB_TOKEN");
 
-    console.log(process.env)
-
+    console.log("Process",process.env)
+    console.log(github)
     const context = github.context;
     console.log(github.context)
     if (context.payload.pull_request == null) {
