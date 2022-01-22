@@ -15,6 +15,8 @@ async function run() {
 
     const github_token = core.getInput("GITHUB_TOKEN");
 
+    console.log(process.env)
+
     const context = github.context;
     console.log(github.context)
     if (context.payload.pull_request == null) {
