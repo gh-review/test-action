@@ -31,10 +31,7 @@ async function run() {
     octokit.rest.issues.createComment({
       ...context.repo,
       issue_number: pull_request_number,
-      body: `
-      ## Test markdown
-       ${files.map(file => `- ${file.name}\n`)}
-      `,
+      body: "## Test markdown \n" + files.map(file => `- ${file}\n`),
     });
 
     console.log("test compltee", files.length);
