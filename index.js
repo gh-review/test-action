@@ -9,9 +9,6 @@ async function run() {
       .withFullPaths()
       .exclude((dirName) => EXCLUDED_FOLDERS.includes(dirName))
       .glob("./**/*.js")
-      .filter(
-        (path) => !(path.endsWith(".test.js") || path.endsWith(".spec.js"))
-      )
       .crawl(".")
       .sync();
 

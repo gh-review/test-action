@@ -4526,14 +4526,11 @@ async function run() {
       .withFullPaths()
       .exclude((dirName) => EXCLUDED_FOLDERS.includes(dirName))
       .glob("./**/*.js")
-      .filter(
-        (path) => !(path.endsWith(".test.js") || path.endsWith(".spec.js"))
-      )
       .crawl(".")
       .sync();
 
 
-    core.setOutput("test compltee", files.length);
+    console.log("test compltee", files.length);
   } catch (error) {
     core.setFailed(error.message);
   }
