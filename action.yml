@@ -1,4 +1,4 @@
-name: 'Test'
+name: 'test-files-length-comment'
 description: 'testing'
 inputs:
     GITHUB_TOKEN:
