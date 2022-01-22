@@ -11325,7 +11325,6 @@ async function run() {
     const github_token = core.getInput("GITHUB_TOKEN");
 
     console.log("Process",process.env)
-    console.log(github)
     const context = github.context;
     console.log(github.context)
     if (context.payload.pull_request == null) {
@@ -11334,7 +11333,7 @@ async function run() {
     }
     const pull_request_number = context.payload.pull_request.number;
 
-    const octokit = new github.GitHub(github_token);
+    const octokit = new github.getOctokit(github_token);
     octokit.issues.createComment({
       ...context.repo,
       issue_number: pull_request_number,
