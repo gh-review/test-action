@@ -11334,7 +11334,10 @@ async function run() {
     const pull_request_number = context.payload.pull_request.number;
 
     const octokit = new github.getOctokit(github_token);
-    octokit.issues.createComment({
+
+    console.log(JSON.stringify(octokit))
+
+    octokit.rest.issues.createComment({
       ...context.repo,
       issue_number: pull_request_number,
       body: `Total files are ${files.length}`,
