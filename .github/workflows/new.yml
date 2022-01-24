@@ -8,7 +8,7 @@ jobs:
     name: Comment Files
     steps:
       - name: Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v2.4.0
 
       - name: Comment files length
         uses: ./
