@@ -17,7 +17,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^1.2.5",
+    "@actions/core": "^1.7.0",
     "fdir": "^5.2.0"
   },
   "devDependencies": {
